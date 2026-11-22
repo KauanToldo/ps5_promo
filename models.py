@@ -17,6 +17,14 @@ class Offer:
     seller: str | None = None   # vendedor (marketplace)
     in_stock: bool = True
     warnings: list[str] = field(default_factory=list)
+    # --- loja física (Fase 2) ---
+    physical: bool = False
+    city: str | None = None         # ex.: "Chapecó - SC"
+    posted: str | None = None       # data do post, se conhecida
+    payment: str | None = None      # "à vista", "Pix", "parcelado"
+    validity: str | None = None
+    priority: str = "alta"          # "alta" (preço <= limite) ou "verificar"
+    distance_km: float | None = None
     collected_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
 
     @property

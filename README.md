@@ -79,3 +79,19 @@ sem atividade: o commit do estado na branch `state` a cada execução mantém o 
 ## Risco de perder o estado
 
 Se a branch `state` for apagada, o monitor recomeça sem histórico: no pior caso repete um alerta.
+
+## Fase 2 (lojas físicas): EXPERIMENTAL, NÃO AGENDADA
+
+Estado honesto: existe o esqueleto, mas **não está ligado no agendamento** e **não é confiável**.
+
+- `lojas_locais.yaml`: lista automática de lojas de Concórdia, Chapecó e Erechim (Google Maps via
+  Serper), com endereço, telefone, site, Instagram/Facebook e distância. Revise-a: pode ter perfis
+  errados e lojas irrelevantes. Regerar: `python main.py --refresh-stores` (gasta ~180 créditos Serper).
+- `python main.py --lojas --dry-run`: busca posts de PS5 no Instagram/Facebook via Google (Serper).
+  A versão atual consulta loja por loja com filtro de data, e isso costuma devolver **vazio**. Testes
+  manuais mostraram que a busca por cidade (`site:instagram.com ps5 slim digital Erechim`) acha posts,
+  mas sem data confiável nem nome da loja.
+- Instagram/Facebook não são acessíveis sem login (testado), e não usamos contas pessoais.
+- Requer o Secret `SERPER_API_KEY`. O plano free tem ~2.500 créditos (search=1, maps=3).
+- O alerta de loja física (texto e HTML "PROMOÇÃO EM LOJA FÍSICA") e a extração de preço de textos
+  de post têm testes unitários, mas nunca dispararam em produção.

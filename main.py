@@ -17,8 +17,8 @@ from pathlib import Path
 import yaml
 
 from filters import apply_rules
-from emailhtml import alert_html, status_html
-from messages import alert_text, brl, heartbeat_text
+from emailhtml import alert_html, physical_html, status_html
+from messages import alert_text, brl, heartbeat_text, physical_text
 from notifier import build_notifier
 from sources import REGISTRY, browser
 from sources.base import Skip
@@ -104,6 +104,48 @@ def run(cfg: dict, dry_run: bool, state_path: str, force_status: bool = False) -
     return 0 if len(failed) < consulted else 1
 
 
+def run_locais(cfg: dict, dry_run: bool, state_path: str) -> int:
+    """Fase 2: promoções de PS5 em lojas físicas (Concórdia, Chapecó, Erechim)."""
+    from sources.locais import LocalSocial
+
+    notifier = build_notifier(dry_run)
+    store = Storage(state_path)
+    limit = cfg["limite_preco"]
+    src = LocalSocial(cfg)
+    ativas = [s for s in src.stores if s.get("ativa", True) and (s.get("instagram") or s.get("facebook"))]
+    try:
+        offers = src.fetch()
+    except Exception as e:
+        log.error("lojas_locais: FALHOU (%s)", e)
+        if store.source_result("lojas_locais", ok=False, warn_days=cfg["falhas_para_avisar_dias"]):
+            notifier.send(f"⚠️ Monitor PS5: a coleta de lojas físicas falha há vários dias. Último erro: {e}")
+        if not dry_run:
+            store.save()
+        return 1
+    store.source_result("lojas_locais", ok=True)
+    offers.sort(key=lambda o: (o.priority != "alta", o.price_cash or 1e9))
+    sent = 0
+    for o in offers:
+        # cada post é avisado uma vez (7 dias); preço novo/menor reenvia
+        if store.should_alert(o, hours=24 * cfg.get("locais", {}).get("dias_recentes", 7)):
+            try:
+                notifier.send(physical_text(o, limit), physical_html(o, limit))
+                store.mark_alerted(o)
+                sent += 1
+            except Exception as e:
+                log.error("falha ao enviar alerta: %s", e)
+    log.info("LOJAS FÍSICAS: %d lojas com perfil, %d achados (%d alta, %d verificar), %d alertas, "
+             "%d créditos Serper", len(ativas), len(offers),
+             sum(o.priority == "alta" for o in offers), sum(o.priority != "alta" for o in offers),
+             sent, src.serper.credits)
+    for o in offers[:10]:
+        log.info("  [%s] %s (%s) | %s | %s", o.priority, o.store, o.city,
+                 brl(o.price_cash) if o.price_cash else "sem preço", o.url)
+    if not dry_run:
+        store.save()
+    return 0
+
+
 def main() -> int:
     for s in (sys.stdout, sys.stderr):
         s.reconfigure(encoding="utf-8", errors="replace")
@@ -111,14 +153,21 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--test-notify", action="store_true")
     ap.add_argument("--status", action="store_true", help="envia e-mail de status agora")
-    ap.add_argument("--refresh-stores", action="store_true")
+    ap.add_argument("--refresh-stores", action="store_true", help="Fase 2: regera lojas_locais.yaml")
+    ap.add_argument("--lojas", action="store_true", help="Fase 2: busca promoções em lojas físicas")
     ap.add_argument("--config", default="config.yaml")
     ap.add_argument("--state", default="data/state.json")
     a = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
     if a.refresh_stores:
-        print("Fase 2 (lojas físicas) ainda não implementada.")
+        from localstores import refresh
+        from serper import Serper
+        sp = Serper()
+        stores = refresh(sp)
+        print(f"{len(stores)} lojas gravadas em lojas_locais.yaml ({sp.credits} créditos Serper)")
         return 0
+    if a.lojas:
+        return run_locais(load_config(a.config), a.dry_run, a.state if a.state != "data/state.json" else "data/state_lojas.json")
     if a.test_notify:
         build_notifier(a.dry_run).send("🎮 Teste do monitor PS5: se você recebeu isto, o WhatsApp está ok.")
         return 0

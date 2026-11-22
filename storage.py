@@ -36,7 +36,7 @@ class Storage:
         last = self.data["alerts"].get(offer.offer_id)
         if not last:
             return True
-        if offer.total is not None and offer.total < last["total"] - 0.005:
+        if offer.total is not None and (last["total"] is None or offer.total < last["total"] - 0.005):
             return True
         sent = datetime.strptime(last["ts"], ISO)
         return now - sent >= timedelta(hours=hours)

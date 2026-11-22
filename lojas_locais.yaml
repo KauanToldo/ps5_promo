@@ -1,0 +1,1611 @@
+# Lojas físicas monitoradas (gerado por `python main.py --refresh-stores`).
+# Revise: `ativa: false` ignora uma loja; edite os perfis se algum estiver errado.
+lojas:
+- nome: AllConect Celulares e Notebooks
+  cidade: Chapecó - SC
+  endereco: Av. Nereu Ramos, 116e - Centro, Chapecó - SC, 89801-341, Brasil
+  site: null
+  instagram: https://www.instagram.com/allconectcelulares
+  facebook: null
+  telefone: +55 49 99959-4332
+  rede: false
+  distancia_km: 59.6
+  ativa: true
+  sem_perfil_publico: false
+- nome: Alô Celulares
+  cidade: Chapecó - SC
+  endereco: Av. São Pedro, 850 E - São Cristóvão, Chapecó - SC, 89803-210, Brasil
+  site: https://www.alocelulares.com/
+  instagram: null
+  facebook: null
+  telefone: +55 49 99912-7530
+  rede: false
+  distancia_km: 61.2
+  ativa: true
+  sem_perfil_publico: true
+- nome: Atacadão do Eletro
+  cidade: Chapecó - SC
+  endereco: R. John Kennedy, 247E - Passo dos Fortes, Chapecó - SC, 89805-500, Brasil
+  site: https://atacadaodoeletro.com.br/
+  instagram: https://www.instagram.com/_atacadaodoeletro
+  facebook: null
+  telefone: +55 49 98899-7574
+  rede: false
+  distancia_km: 60.3
+  ativa: true
+  sem_perfil_publico: false
+- nome: B2celulares Chapecó
+  cidade: Chapecó - SC
+  endereco: Av. Porto Alegre, 750D - Centro, Chapecó - SC, 89814-100, Brasil
+  site: https://www.instagram.com/b2celulareschapeco/
+  instagram: https://www.instagram.com/b2celulareschapeco
+  facebook: null
+  telefone: +55 49 92000-8420
+  rede: false
+  distancia_km: 60.4
+  ativa: true
+  sem_perfil_publico: false
+- nome: BFTECH
+  cidade: Chapecó - SC
+  endereco: R. Cunha Porã, 191D - Efapi, Chapecó - SC, 89809-507, Brasil
+  site: https://www.bftech.inf.br/contato
+  instagram: https://www.instagram.com/bftech.info
+  facebook: null
+  telefone: +55 49 3520-1234
+  rede: false
+  distancia_km: 65.8
+  ativa: true
+  sem_perfil_publico: false
+- nome: Berlanda | Centro
+  cidade: Chapecó - SC
+  endereco: Av. Getúlio Dorneles Vargas, 667 - Centro, Chapecó - SC, 89802-130, Brasil
+  site: https://lojas.grupoberlanda.com.br/berlanda-centro-chapeco-sc
+  instagram: null
+  facebook: null
+  telefone: +55 49 3412-3639
+  rede: true
+  distancia_km: 60.1
+  ativa: true
+  sem_perfil_publico: true
+- nome: Berlanda | Passo dos Fortes
+  cidade: Chapecó - SC
+  endereco: R. Borges de Medeiros, 2251 - Passo dos Fortes, Chapecó - SC, 89805-570,
+    Brasil
+  site: null
+  instagram: https://www.instagram.com/passo_dos_fortes
+  facebook: null
+  telefone: +55 49 3245-4827
+  rede: true
+  distancia_km: 60.2
+  ativa: true
+  sem_perfil_publico: false
+- nome: Bitex Informática
+  cidade: Chapecó - SC
+  endereco: R. Benedito Novo, 1340 - Cristo Rei, Chapecó - SC, 89810-060, Brasil
+  site: null
+  instagram: https://www.instagram.com/bitex_informatica
+  facebook: null
+  telefone: +55 49 98403-1441
+  rede: false
+  distancia_km: 63.2
+  ativa: true
+  sem_perfil_publico: false
+- nome: CASA NOVA MÓVEIS E ELETRO
+  cidade: Chapecó - SC
+  endereco: Av. São Pedro, 294 - E - Centro, Chapecó - SC, 89814-480, Brasil
+  site: null
+  instagram: https://www.instagram.com/casanova_moveiseeletro
+  facebook: null
+  telefone: +55 49 99800-3646
+  rede: false
+  distancia_km: 60.7
+  ativa: true
+  sem_perfil_publico: false
+- nome: Chapeco Informatica Efapi
+  cidade: Chapecó - SC
+  endereco: Servidão Anjo da Guarda - Efapi, Chapecó - SC, 89809-503, Brasil
+  site: https://chapecoinformatica.com.br/
+  instagram: https://www.instagram.com/chapecoinformatica_efapi
+  facebook: null
+  telefone: +55 49 3340-0656
+  rede: false
+  distancia_km: 65.1
+  ativa: true
+  sem_perfil_publico: false
+- nome: Chapecó Informática Manutenção de Computadores
+  cidade: Chapecó - SC
+  endereco: Av. Nereu Ramos, 429D - Centro, Chapecó - SC, 89801-023, Brasil
+  site: http://www.chapecoinformatica.com.br/
+  instagram: null
+  facebook: null
+  telefone: +55 49 3199-1612
+  rede: false
+  distancia_km: 59.4
+  ativa: true
+  sem_perfil_publico: true
+- nome: Compucenter Informática
+  cidade: Chapecó - SC
+  endereco: R. Tapajós, 55-E - Universitário, Chapecó - SC, 89812-465, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 49 99923-3559
+  rede: false
+  distancia_km: 58.7
+  ativa: true
+  sem_perfil_publico: true
+- nome: Crescer Informática
+  cidade: Chapecó - SC
+  endereco: Av. Fernando Machado, 582D - Centro, Chapecó - SC, 89802-110, Brasil
+  site: http://www.crescer.inf.br/
+  instagram: https://www.instagram.com/crescer_informatica
+  facebook: null
+  telefone: +55 49 3322-4747
+  rede: false
+  distancia_km: 60.2
+  ativa: true
+  sem_perfil_publico: false
+- nome: Dataproxy Soluções Tecnológicas
+  cidade: Chapecó - SC
+  endereco: R. Minas Gerais, 625 - Centro, Chapecó - SC, 89801-200, Brasil
+  site: https://www.dataproxy.com.br/
+  instagram: null
+  facebook: null
+  telefone: +55 49 3324-5188
+  rede: false
+  distancia_km: 59.8
+  ativa: true
+  sem_perfil_publico: true
+- nome: Direct Informática Ltda
+  cidade: Chapecó - SC
+  endereco: Edifício Bali - R. Condá, E 1463 - Pres. Médici, Chapecó - SC, 89801-131,
+    Brasil
+  site: https://directinf.com.br/
+  instagram: null
+  facebook: null
+  telefone: +55 49 99942-9298
+  rede: false
+  distancia_km: 59.9
+  ativa: true
+  sem_perfil_publico: true
+- nome: Disk Informática
+  cidade: Chapecó - SC
+  endereco: R. Guarulhos, 288E - Passo dos Fortes, Chapecó - SC, 89805-760, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 49 98855-4499
+  rede: false
+  distancia_km: 59.4
+  ativa: true
+  sem_perfil_publico: true
+- nome: Eletro Dvolta Chapecó
+  cidade: Chapecó - SC
+  endereco: R. Paulino Giocondo Cella Carraro, 117 - Líder, Chapecó - SC, 89811-180,
+    Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 49 99822-3456
+  rede: false
+  distancia_km: 61.7
+  ativa: true
+  sem_perfil_publico: true
+- nome: Eletrônica Azevedo
+  cidade: Chapecó - SC
+  endereco: Ao lado da panificadora Doce Pão - R. Dom Pedro I, 539 - São Cristóvão,
+    Chapecó - SC, 89803-220, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 49 3323-2981
+  rede: false
+  distancia_km: 61.3
+  ativa: true
+  sem_perfil_publico: true
+- nome: Eletrônica Brilho
+  cidade: Chapecó - SC
+  endereco: R. Artur Bernardi, 175 - São Cristóvão, Chapecó - SC, 89803-214, Brasil
+  site: http://www.eletronicabrilho.com.br/
+  instagram: null
+  facebook: null
+  telefone: +55 49 3322-3304
+  rede: false
+  distancia_km: 61.0
+  ativa: true
+  sem_perfil_publico: true
+- nome: Eletrônica Efapi
+  cidade: Chapecó - SC
+  endereco: R. Odorico Zanini, 47 - Efapi, Chapecó - SC, 89809-851, Brasil
+  site: null
+  instagram: https://www.instagram.com/eletronica.mtec
+  facebook: null
+  telefone: null
+  rede: false
+  distancia_km: 66.1
+  ativa: true
+  sem_perfil_publico: false
+- nome: Express tecnologia e celulares
+  cidade: Chapecó - SC
+  endereco: R. Benjamin Constant, 284e - Centro, Chapecó - SC, 89802-200, Brasil
+  site: null
+  instagram: https://www.instagram.com/expresscelulares
+  facebook: null
+  telefone: +55 49 3324-7951
+  rede: false
+  distancia_km: 60.3
+  ativa: true
+  sem_perfil_publico: false
+- nome: Globaltec Informática LTDA
+  cidade: Chapecó - SC
+  endereco: Av. São Pedro, 1460 E - São Cristóvão, Chapecó - SC, 89803-402, Brasil
+  site: https://www.globaltecinfo.com.br/
+  instagram: null
+  facebook: null
+  telefone: +55 49 3316-2450
+  rede: false
+  distancia_km: 61.7
+  ativa: true
+  sem_perfil_publico: true
+- nome: Havan Chapecó - Centro
+  cidade: Chapecó - SC
+  endereco: Av. Getúlio Dorneles Vargas, 558 - Centro, Chapecó - SC, 89801-000, Brasil
+  site: https://www.havan.com.br/?utm_source=gmb&utm_medium=gmb-perfil&utm_campaign=lc_12
+  instagram: null
+  facebook: null
+  telefone: +55 49 3319-9900
+  rede: true
+  distancia_km: 60.0
+  ativa: true
+  sem_perfil_publico: true
+- nome: Havan Pátio Chapecó
+  cidade: Chapecó - SC
+  endereco: Av. Fernando Machado, 4.000 - Líder, Chapecó - SC, 89805-203, Brasil
+  site: https://www.havan.com.br/?utm_source=gmb&utm_medium=gmb-perfil&utm_campaign=lc_31
+  instagram: null
+  facebook: null
+  telefone: +55 49 3319-9950
+  rede: true
+  distancia_km: 61.9
+  ativa: true
+  sem_perfil_publico: true
+- nome: Imprima Informática
+  cidade: Chapecó - SC
+  endereco: R. Rio de Janeiro, 87 - Centro, Chapecó - SC, 89801-210, Brasil
+  site: http://www.imprimatoner.com.br/
+  instagram: https://www.instagram.com/imprima.informatica
+  facebook: null
+  telefone: +55 49 3328-6320
+  rede: false
+  distancia_km: 60.3
+  ativa: true
+  sem_perfil_publico: false
+- nome: Info Catarinense Informática
+  cidade: Chapecó - SC
+  endereco: Edifício Las Vegas - Av. Nereu Ramos, 970E - Sl 08 - Centro, Chapecó -
+    SC, 89801-021, Brasil
+  site: https://www.instagram.com/info.catarinense
+  instagram: https://www.instagram.com/info.catarinense
+  facebook: null
+  telefone: +55 49 3329-2377
+  rede: false
+  distancia_km: 60.0
+  ativa: true
+  sem_perfil_publico: false
+- nome: Info Chapecó
+  cidade: Chapecó - SC
+  endereco: R. João Cruz e Souza, 210 - B - Cristo Rei, Chapecó - SC, 89804-363, Brasil
+  site: http://infochapeco.com.br/
+  instagram: https://www.instagram.com/infochapecoinformatica
+  facebook: null
+  telefone: +55 49 3323-9099
+  rede: false
+  distancia_km: 62.2
+  ativa: true
+  sem_perfil_publico: false
+- nome: Infocerta Informática
+  cidade: Chapecó - SC
+  endereco: R. Paulo Marquês, 81 - D - Centro, Chapecó - SC, 89805-010, Brasil
+  site: http://www.infocertainfo.com.br/
+  instagram: https://www.instagram.com/infocertainformatica
+  facebook: null
+  telefone: +55 49 3329-2677
+  rede: false
+  distancia_km: 60.5
+  ativa: true
+  sem_perfil_publico: false
+- nome: Inforsul Informática
+  cidade: Chapecó - SC
+  endereco: R. Sady de Marco, 52-D - Jardim Itália, Chapecó - SC, 89802-280, Brasil
+  site: http://www.inforsul.com.br/
+  instagram: null
+  facebook: null
+  telefone: +55 49 3331-2738
+  rede: false
+  distancia_km: 60.7
+  ativa: true
+  sem_perfil_publico: true
+- nome: Inova Móveis e Eletro
+  cidade: Chapecó - SC
+  endereco: Av. Getúlio Dorneles Vargas, 601 - Sl 01 - Centro, Chapecó - SC, 89802-000,
+    Brasil
+  site: https://www.inovamoveiseletro.com.br/
+  instagram: null
+  facebook: null
+  telefone: +55 49 3025-1704
+  rede: false
+  distancia_km: 60.1
+  ativa: true
+  sem_perfil_publico: true
+- nome: Inova Móveis e Eletro - Fernando Machado
+  cidade: Chapecó - SC
+  endereco: Av. Fernando Machado, 1029 - Centro, Chapecó - SC, 89803-003, Brasil
+  site: https://www.inovamoveiseletro.com.br/
+  instagram: null
+  facebook: null
+  telefone: +55 49 99985-0946
+  rede: false
+  distancia_km: 60.5
+  ativa: true
+  sem_perfil_publico: true
+- nome: ItCase - Shopping
+  cidade: Chapecó - SC
+  endereco: Av. Fernando Machado, 4000 D - Líder, Chapecó - SC, 89805-203, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 49 98927-8479
+  rede: false
+  distancia_km: 62.0
+  ativa: true
+  sem_perfil_publico: true
+- nome: Kingdom Acessórios Eletronicos
+  cidade: Chapecó - SC
+  endereco: Av. Sen. Attilio Fontana - Efapi, Chapecó - SC, 89809-510, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 49 98400-4882
+  rede: false
+  distancia_km: 65.4
+  ativa: true
+  sem_perfil_publico: true
+- nome: Lojas Benoit
+  cidade: Chapecó - SC
+  endereco: Av. Getúlio Dorneles Vargas, 415 - Centro, Chapecó - SC, 89801-000, Brasil
+  site: https://loja.benoit.com.br/937
+  instagram: https://www.instagram.com/lojasbenoit_chapeco
+  facebook: null
+  telefone: +55 49 99182-5684
+  rede: true
+  distancia_km: 60.0
+  ativa: true
+  sem_perfil_publico: false
+- nome: Lojas Colombo
+  cidade: Chapecó - SC
+  endereco: Av. Getúlio Dorneles Vargas, 751 - N - Centro, Chapecó - SC, 89802-002,
+    Brasil
+  site: https://www.colombo.com.br/nossas-lojas/sc/chapeco
+  instagram: https://www.instagram.com/colombochapeco
+  facebook: null
+  telefone: +55 49 3322-5914
+  rede: true
+  distancia_km: 60.2
+  ativa: true
+  sem_perfil_publico: false
+- nome: Lojas Multi
+  cidade: Chapecó - SC
+  endereco: R. Marechal José B. Bormann, 114d - Centro, Chapecó - SC, 89801-050, Brasil
+  site: http://www.lojasmulti.com.br/
+  instagram: https://www.instagram.com/lojas.multi
+  facebook: null
+  telefone: +55 49 3322-3106
+  rede: false
+  distancia_km: 59.8
+  ativa: true
+  sem_perfil_publico: false
+- nome: MV Informática
+  cidade: Chapecó - SC
+  endereco: R. Guarulhos, 330e - Passo dos Fortes, Chapecó - SC, 89805-760, Brasil
+  site: null
+  instagram: https://www.instagram.com/mvinformatica_23
+  facebook: null
+  telefone: +55 49 98855-4499
+  rede: false
+  distancia_km: 59.4
+  ativa: true
+  sem_perfil_publico: false
+- nome: Mania Games
+  cidade: Chapecó - SC
+  endereco: Av. Fernando Machado, 4000 - Líder, Chapecó - SC, 89805-186, Brasil
+  site: https://www.shoppingpatiochapeco.com.br/loja.asp
+  instagram: https://www.instagram.com/maniagameschapeco
+  facebook: null
+  telefone: +55 47 99647-1399
+  rede: false
+  distancia_km: 61.8
+  ativa: true
+  sem_perfil_publico: false
+- nome: Master Informática Recargas Chapecó
+  cidade: Chapecó - SC
+  endereco: 101-E - R. Uruguai - Centro, Chapecó - SC, 89801-570, Brasil
+  site: http://masterrecargas.com.br/
+  instagram: null
+  facebook: null
+  telefone: +55 49 3329-4210
+  rede: false
+  distancia_km: 59.5
+  ativa: true
+  sem_perfil_publico: true
+- nome: Maximus Gamer
+  cidade: Chapecó - SC
+  endereco: Avenida Marechal Bormann, 91 E - Centro, Chapecó - SC, 89802-120, Brasil
+  site: https://maximusgamer.com.br/
+  instagram: https://www.instagram.com/lojamaximusgamer
+  facebook: null
+  telefone: +55 49 3324-3202
+  rede: false
+  distancia_km: 60.0
+  ativa: true
+  sem_perfil_publico: false
+- nome: Mega Eletronicos
+  cidade: Chapecó - SC
+  endereco: Tv. Brasil, 18 D - Centro, Chapecó - SC, 89801-025, Brasil
+  site: null
+  instagram: https://www.instagram.com/eletronicos_mega
+  facebook: null
+  telefone: +55 49 99999-1571
+  rede: false
+  distancia_km: 59.6
+  ativa: true
+  sem_perfil_publico: false
+- nome: Multiverso Games
+  cidade: Chapecó - SC
+  endereco: R. Jacinto Patussi, 20-D - Quedas do Palmital, Chapecó - SC, 89815-220,
+    Brasil
+  site: https://www.instagram.com/multiverso_games_/
+  instagram: https://www.instagram.com/multiverso_games_
+  facebook: null
+  telefone: +55 49 98861-6776
+  rede: false
+  distancia_km: 59.5
+  ativa: true
+  sem_perfil_publico: false
+- nome: My Place - Chapecó
+  cidade: Chapecó - SC
+  endereco: R. Mal. Deodoro, 1630 - Maria Goretti, Chapecó - SC, 89806-020, Brasil
+  site: https://api.whatsapp.com/send?phone=5549999994444
+  instagram: null
+  facebook: null
+  telefone: +55 49 99999-4444
+  rede: false
+  distancia_km: 58.6
+  ativa: true
+  sem_perfil_publico: true
+- nome: New Games e Manutenções
+  cidade: Chapecó - SC
+  endereco: R. Quintino Bocaiúva, 185-E - Centro, Chapecó - SC, 89802-250, Brasil
+  site: https://www.facebook.com/Newgameschapeco/
+  instagram: null
+  facebook: https://www.facebook.com/Newgameschapeco
+  telefone: +55 49 98438-4042
+  rede: false
+  distancia_km: 60.3
+  ativa: true
+  sem_perfil_publico: false
+- nome: NovaCel - Loja de Celular
+  cidade: Chapecó - SC
+  endereco: R. Uruguai, 136E - Centro, Chapecó - SC, 89801-570, Brasil
+  site: https://www.lojanovacel.com.br/
+  instagram: null
+  facebook: null
+  telefone: +55 49 99126-8185
+  rede: false
+  distancia_km: 59.5
+  ativa: true
+  sem_perfil_publico: true
+- nome: NovaPlay Efapi
+  cidade: Chapecó - SC
+  endereco: Av. Sen. Attilio Fontana - Efapi, Chapecó - SC, 89809-510, Brasil
+  site: https://maximusgamer.com.br/
+  instagram: null
+  facebook: null
+  telefone: +55 49 3199-4199
+  rede: false
+  distancia_km: 65.6
+  ativa: true
+  sem_perfil_publico: true
+- nome: Novatec Eletronicos
+  cidade: Chapecó - SC
+  endereco: Ao lado da Amiglis - Tv. Brasil - Centro, Chapecó - SC, 89801-025, Brasil
+  site: https://linktr.ee/novateceletronicos
+  instagram: null
+  facebook: null
+  telefone: +55 49 98411-1957
+  rede: false
+  distancia_km: 59.6
+  ativa: true
+  sem_perfil_publico: true
+- nome: Novice Chapecó
+  cidade: Chapecó - SC
+  endereco: Av. Getúlio Dorneles Vargas, 1661 - Centro, Chapecó - SC, 89805-186, Brasil
+  site: https://www.novicechapeco.com.br/
+  instagram: null
+  facebook: null
+  telefone: +55 49 99966-0776
+  rede: false
+  distancia_km: 60.6
+  ativa: true
+  sem_perfil_publico: true
+- nome: Oficina de Games - Unochapecó
+  cidade: Chapecó - SC
+  endereco: Atílio Fontana 591-e - Bloco F, 2º Piso - Efapi, Chapecó - SC, 89809-000,
+    Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 49 3321-8264
+  rede: false
+  distancia_km: 65.0
+  ativa: true
+  sem_perfil_publico: true
+- nome: Palace Games
+  cidade: Chapecó - SC
+  endereco: R. Domingos Baldissera, 174 - Santa Maria, Chapecó - SC, 89812-320, Brasil
+  site: http://instagram.com/palace_games_
+  instagram: https://www.instagram.com/palace_games_
+  facebook: null
+  telefone: +55 49 99105-9315
+  rede: false
+  distancia_km: 58.6
+  ativa: true
+  sem_perfil_publico: false
+- nome: Serpal
+  cidade: Chapecó - SC
+  endereco: R. Quintino Bocaiúva, 445 - Centro, Chapecó - SC, 89802-275, Brasil
+  site: https://serpaleletrochapeco.com.br/
+  instagram: https://www.instagram.com/serpal_eletro
+  facebook: null
+  telefone: +55 49 3323-4687
+  rede: false
+  distancia_km: 60.5
+  ativa: true
+  sem_perfil_publico: false
+- nome: Solução Eletrônica
+  cidade: Chapecó - SC
+  endereco: R. Marquês de Caravelas, 303 - Sala-4 - Jardim América, Chapecó - SC,
+    89803-290, Brasil
+  site: null
+  instagram: https://www.instagram.com/solucaoeletronicaindustrial
+  facebook: null
+  telefone: +55 49 3323-2043
+  rede: false
+  distancia_km: 61.5
+  ativa: true
+  sem_perfil_publico: false
+- nome: Spagnol Eletrônica e Informática
+  cidade: Chapecó - SC
+  endereco: R. José de Alencar, 652 - São Cristóvão, Chapecó - SC, 89803-190, Brasil
+  site: https://spagnol.tec.br/
+  instagram: null
+  facebook: null
+  telefone: +55 49 3322-5450
+  rede: false
+  distancia_km: 61.4
+  ativa: true
+  sem_perfil_publico: true
+- nome: SpeedCell Chapecó
+  cidade: Chapecó - SC
+  endereco: R. Hermes da Fonseca, 1006E - Bela Vista, Chapecó - SC, 89804-131, Brasil
+  site: http://instagram.com/speedcellchapeco
+  instagram: https://www.instagram.com/speedcellchapeco
+  facebook: null
+  telefone: +55 49 99116-9461
+  rede: false
+  distancia_km: 62.2
+  ativa: true
+  sem_perfil_publico: false
+- nome: Startech
+  cidade: Chapecó - SC
+  endereco: Av. Fernando Machado, 30D - Centro, Chapecó - SC, 89802-112, Brasil
+  site: https://www.instagram.com/startechcelulares/
+  instagram: https://www.instagram.com/startechcelulares
+  facebook: null
+  telefone: +55 49 99835-3002
+  rede: false
+  distancia_km: 59.9
+  ativa: true
+  sem_perfil_publico: false
+- nome: System Four Informática
+  cidade: Chapecó - SC
+  endereco: R. Osvaldo Cruz, 287 E - São Cristóvão, Chapecó - SC, 89804-050, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 49 3316-2885
+  rede: false
+  distancia_km: 61.5
+  ativa: true
+  sem_perfil_publico: true
+- nome: Tchê Loko Eletrônicos
+  cidade: Chapecó - SC
+  endereco: Trabalho - Centro, Chapecó - SC, 89801-025, Brasil
+  site: null
+  instagram: https://www.instagram.com/tchelokocco
+  facebook: null
+  telefone: +55 49 98810-7290
+  rede: false
+  distancia_km: 59.7
+  ativa: true
+  sem_perfil_publico: false
+- nome: WORLD GAMES
+  cidade: Chapecó - SC
+  endereco: R. John Kennedy, 760 E - Passo dos Fortes, Chapecó - SC, 89805-500, Brasil
+  site: http://www.comprenaworld.com/
+  instagram: https://www.instagram.com/worldgamescco
+  facebook: null
+  telefone: +55 49 98888-0000
+  rede: false
+  distancia_km: 60.4
+  ativa: true
+  sem_perfil_publico: false
+- nome: iShopCell Chapecó
+  cidade: Chapecó - SC
+  endereco: Rua Guaporé, 299E - Centro, Chapecó - SC, 89802-300, Brasil
+  site: https://instagram.com/ishopcell_cco
+  instagram: https://www.instagram.com/ishopcell_cco
+  facebook: null
+  telefone: +55 49 99132-8472
+  rede: false
+  distancia_km: 60.5
+  ativa: true
+  sem_perfil_publico: false
+- nome: 📱 OneCell Chapecó
+  cidade: Chapecó - SC
+  endereco: Av. Nereu Ramos, 75 - Centro, Chapecó - SC, 89801-023, Brasil
+  site: https://www.instagram.com/onecell_cco/
+  instagram: https://www.instagram.com/onecell_cco
+  facebook: null
+  telefone: +55 49 99825-8000
+  rede: false
+  distancia_km: 59.5
+  ativa: true
+  sem_perfil_publico: false
+- nome: Bonimachi Informática Materiais de Escritório
+  cidade: Concórdia - SC
+  endereco: R. Leonel Mosele, 335 - Centro, Concórdia - SC, 89700-177, Brasil
+  site: http://www.bonimachi.com.br/
+  instagram: null
+  facebook: null
+  telefone: +55 49 3442-0187
+  rede: false
+  distancia_km: 0.6
+  ativa: true
+  sem_perfil_publico: true
+- nome: Brasil Informática
+  cidade: Concórdia - SC
+  endereco: R. Dr. Maruri, 1365 - Centro, Concórdia - SC, 89700-158, Brasil
+  site: https://brasilinformatica.info/
+  instagram: https://www.instagram.com/brasil_informatica
+  facebook: null
+  telefone: +55 49 3444-6649
+  rede: false
+  distancia_km: 1.0
+  ativa: true
+  sem_perfil_publico: false
+- nome: Business Informática
+  cidade: Concórdia - SC
+  endereco: R. Dep. Carlos Buchele, 79 - Centro, Concórdia - SC, 89700-130, Brasil
+  site: http://https.business.inf.br/
+  instagram: https://www.instagram.com/businessinformatica
+  facebook: null
+  telefone: +55 49 3444-0472
+  rede: false
+  distancia_km: 0.6
+  ativa: true
+  sem_perfil_publico: false
+- nome: Canal Off_Smash
+  cidade: Concórdia - SC
+  endereco: Rua João Suzin Marini - Concórdia, SC, 89700-280, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 49 99105-9853
+  rede: false
+  distancia_km: 2.2
+  ativa: true
+  sem_perfil_publico: true
+- nome: Cc informática e materiais para escritório
+  cidade: Concórdia - SC
+  endereco: R. Dep. Carlos Buchele - Concórdia, SC, 89700-000, Brasil
+  site: https://ccinformaticaemateriais.lojavirtualnuvem.com.br/
+  instagram: https://www.instagram.com/cc_informaticaepapelaria_5649
+  facebook: null
+  telefone: +55 49 3442-5649
+  rede: false
+  distancia_km: 0.7
+  ativa: true
+  sem_perfil_publico: false
+- nome: Concórdia Informática
+  cidade: Concórdia - SC
+  endereco: R. do Comércio, 465 - Centro, Concórdia - SC, 89700-089, Brasil
+  site: https://www.concordia.inf.br/
+  instagram: https://www.instagram.com/concordia.inf.br
+  facebook: null
+  telefone: +55 48 3821-3900
+  rede: false
+  distancia_km: 0.5
+  ativa: true
+  sem_perfil_publico: false
+- nome: Dala Celulares CompreTudo
+  cidade: Concórdia - SC
+  endereco: BR-153 - Concórdia, SC, 89700-000, Brasil
+  site: https://www.instagram.com/dalacelulares/
+  instagram: https://www.instagram.com/dalacelulares
+  facebook: null
+  telefone: +55 49 99831-8324
+  rede: false
+  distancia_km: 7.6
+  ativa: true
+  sem_perfil_publico: false
+- nome: DigiSat Tecnologia LTDA
+  cidade: Concórdia - SC
+  endereco: R. Vinte e Nove de Julho, 274 - Centro, Concórdia - SC, 89700-041, Brasil
+  site: https://www.digisat.com.br/
+  instagram: https://www.instagram.com/iris_digisat
+  facebook: null
+  telefone: +55 49 3441-1600
+  rede: false
+  distancia_km: 0.2
+  ativa: true
+  sem_perfil_publico: false
+- nome: Fulltech Equipamentos Ltda EPP
+  cidade: Concórdia - SC
+  endereco: Rua Henrique Franzosi, 101 - Sunti, Concórdia - SC, 89708-009, Brasil
+  site: http://www.fulltechequipamentos.com.br/
+  instagram: null
+  facebook: null
+  telefone: +55 49 3442-3527
+  rede: false
+  distancia_km: 0.7
+  ativa: true
+  sem_perfil_publico: true
+- nome: GET Informatica
+  cidade: Concórdia - SC
+  endereco: R. Ângelo Ary Biazus, 639 - Dos Imigrantes, Concórdia - SC, 89711-068,
+    Brasil
+  site: http://www.getinformatica.com/
+  instagram: https://www.instagram.com/lojaget.info
+  facebook: null
+  telefone: +55 49 3425-9350
+  rede: false
+  distancia_km: 1.3
+  ativa: true
+  sem_perfil_publico: false
+- nome: Globo Celulares Concórdia
+  cidade: Concórdia - SC
+  endereco: R. do Comércio, 88 - Centro, Concórdia - SC, 89700-083, Brasil
+  site: http://www.globocelulares.com.br/
+  instagram: null
+  facebook: null
+  telefone: +55 49 3442-1614
+  rede: false
+  distancia_km: 0.5
+  ativa: true
+  sem_perfil_publico: true
+- nome: Gold Tecnologia
+  cidade: Concórdia - SC
+  endereco: R. Mal. Deodoro, 1356 - Centro, Concórdia - SC, 89700-055, Brasil
+  site: https://goldtecnologia.com.br/
+  instagram: https://www.instagram.com/goldtecnologia
+  facebook: null
+  telefone: +55 49 3030-8384
+  rede: false
+  distancia_km: 0.3
+  ativa: true
+  sem_perfil_publico: false
+- nome: Havan Concórdia
+  cidade: Concórdia - SC
+  endereco: R. Tancredo de Almeida Neves, 5192 - São Cristóvão, Concórdia - SC, 89700-000,
+    Brasil
+  site: https://www.havan.com.br/?utm_source=gmb&utm_medium=gmb-perfil&utm_campaign=lc_212
+  instagram: null
+  facebook: null
+  telefone: +55 49 3311-3600
+  rede: true
+  distancia_km: 5.1
+  ativa: true
+  sem_perfil_publico: true
+- nome: Info Oeste Informática
+  cidade: Concórdia - SC
+  endereco: R. Orestes Farina, 205 - Centro, Concórdia - SC, 89700-000, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 49 3444-0599
+  rede: false
+  distancia_km: 0.3
+  ativa: true
+  sem_perfil_publico: true
+- nome: Infomais Tecnologia
+  cidade: Concórdia - SC
+  endereco: R. Getúlio Vargas, 184 - Centro, Concórdia - SC, 89700, Brasil
+  site: null
+  instagram: https://www.instagram.com/infomais_tecnologia
+  facebook: null
+  telefone: +55 49 3442-0882
+  rede: false
+  distancia_km: 0.4
+  ativa: true
+  sem_perfil_publico: false
+- nome: Konkas Tecnologia
+  cidade: Concórdia - SC
+  endereco: R. Romano Anselmo Fontana, 296 - Centro, Concórdia - SC, 89700-095, Brasil
+  site: http://www.loja.konkas.com.br/
+  instagram: https://www.instagram.com/konkastecnologia
+  facebook: null
+  telefone: +55 49 99903-6610
+  rede: false
+  distancia_km: 0.5
+  ativa: true
+  sem_perfil_publico: false
+- nome: Kza do Celular
+  cidade: Concórdia - SC
+  endereco: R. do Comércio, 147 - Centro, Concórdia - SC, 89700-000, Brasil
+  site: null
+  instagram: https://www.instagram.com/kzadocelularconcordia
+  facebook: null
+  telefone: +55 49 99962-1425
+  rede: false
+  distancia_km: 0.4
+  ativa: true
+  sem_perfil_publico: false
+- nome: Loja Claro
+  cidade: Concórdia - SC
+  endereco: Agente Autorizado - R. do Comércio, 128 - Centro, Concórdia - SC, 89700-083,
+    Brasil
+  site: https://www.claro.com.br/encontre-uma-loja
+  instagram: null
+  facebook: null
+  telefone: +55 49 98851-0440
+  rede: false
+  distancia_km: 0.5
+  ativa: true
+  sem_perfil_publico: true
+- nome: Lojas Becker
+  cidade: Concórdia - SC
+  endereco: R. Getúlio Vargas, 85 - Centro, Concórdia - SC, 89700-079, Brasil
+  site: http://www.lojasbecker.com/
+  instagram: null
+  facebook: null
+  telefone: +55 49 3444-0832
+  rede: false
+  distancia_km: 0.5
+  ativa: true
+  sem_perfil_publico: true
+- nome: Lojas Benoit
+  cidade: Concórdia - SC
+  endereco: R. Getúlio Vargas, 250 - Centro, Concórdia - SC, 89700-077, Brasil
+  site: https://loja.benoit.com.br/874
+  instagram: https://www.instagram.com/lojasbenoit_concordia
+  facebook: null
+  telefone: +55 49 99175-3479
+  rede: true
+  distancia_km: 0.3
+  ativa: true
+  sem_perfil_publico: false
+- nome: Lojas Colombo
+  cidade: Concórdia - SC
+  endereco: R. do Comércio, 318 - Centro, Concórdia - SC, 89700-000, Brasil
+  site: https://www.colombo.com.br/nossas-lojas/sc/concordia/loja-140
+  instagram: https://www.instagram.com/lojascolomboconcordia
+  facebook: null
+  telefone: +55 49 3442-2079
+  rede: true
+  distancia_km: 0.5
+  ativa: true
+  sem_perfil_publico: false
+- nome: Magazine Luiza
+  cidade: Concórdia - SC
+  endereco: R. do Comércio, 170 - Centro, Concórdia - SC, 89700-083, Brasil
+  site: https://lojas.magazineluiza.com.br/buscar-filiais?utm_source=google&utm_medium=maps&utm_campaign=gbp
+  instagram: https://www.instagram.com/magalu_concordia
+  facebook: null
+  telefone: +55 49 3441-1200
+  rede: true
+  distancia_km: 0.5
+  ativa: true
+  sem_perfil_publico: false
+- nome: Marafim
+  cidade: Concórdia - SC
+  endereco: R. Arcizo Colla, 386 - Centro, Concórdia - SC, 89700-000, Brasil
+  site: https://marafim.com.br/
+  instagram: https://www.instagram.com/marafimmoveis
+  facebook: null
+  telefone: +55 49 3444-4050
+  rede: false
+  distancia_km: 0.5
+  ativa: true
+  sem_perfil_publico: false
+- nome: Max Tecnologia
+  cidade: Concórdia - SC
+  endereco: R. Dr. Maruri, Nº1003 - Concórdia, SC, 89700-000, Brasil
+  site: null
+  instagram: https://www.instagram.com/maxtecnologiaconcordia
+  facebook: null
+  telefone: +55 49 99812-8299
+  rede: false
+  distancia_km: 0.7
+  ativa: true
+  sem_perfil_publico: false
+- nome: Megatech Informática
+  cidade: Concórdia - SC
+  endereco: R. Pref. Domingos Machado de Lima, 706 - Sl 02 - Centro, Concórdia - SC,
+    89700-073, Brasil
+  site: https://instagram.com/megatechconcordia
+  instagram: https://www.instagram.com/megatechconcordia
+  facebook: null
+  telefone: +55 49 99994-3903
+  rede: false
+  distancia_km: 0.2
+  ativa: true
+  sem_perfil_publico: false
+- nome: MicroTECH Informática
+  cidade: Concórdia - SC
+  endereco: R. Vinte e Nove de Julho, 722 - Nazaré, Concórdia - SC, 89700-000, Brasil
+  site: https://wa.me/message/7ONRO5KOFVKAG1
+  instagram: https://www.instagram.com/microtech.inf
+  facebook: null
+  telefone: +55 49 3442-4686
+  rede: false
+  distancia_km: 0.7
+  ativa: true
+  sem_perfil_publico: false
+- nome: New Point Informática
+  cidade: Concórdia - SC
+  endereco: R. do Comércio, 446 - Centro, Concórdia - SC, 89700-000, Brasil
+  site: https://wa.me/5549999710859
+  instagram: null
+  facebook: null
+  telefone: +55 49 99971-0859
+  rede: false
+  distancia_km: 0.5
+  ativa: true
+  sem_perfil_publico: true
+- nome: Planeta Games Concordia
+  cidade: Concórdia - SC
+  endereco: R. Independência, 91 - Centro, Concórdia - SC, 89700-000, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 49 99942-0176
+  rede: false
+  distancia_km: 1.1
+  ativa: true
+  sem_perfil_publico: true
+- nome: Schumann - Concórdia
+  cidade: Concórdia - SC
+  endereco: R. Dr. Maruri, 780 - Centro, Concórdia - SC, 89700-168, Brasil
+  site: https://www.schumann.com.br/?utm_source=Google%20Maps&utm_medium=15
+  instagram: https://www.instagram.com/schumann.concordia
+  facebook: null
+  telefone: +55 49 98403-8289
+  rede: false
+  distancia_km: 0.5
+  ativa: true
+  sem_perfil_publico: false
+- nome: Senhor Smart – Concórdia/SC
+  cidade: Concórdia - SC
+  endereco: R. do Comércio, 257 - Sl 02 - Centro, Concórdia - SC, 89700-085, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 49 3444-7445
+  rede: false
+  distancia_km: 0.4
+  ativa: true
+  sem_perfil_publico: true
+- nome: SomTec Vídeo Eletrônica
+  cidade: Concórdia - SC
+  endereco: R. Orestes Farina, 165 - Centro, Concórdia - SC, 89700-000, Brasil
+  site: https://wa.me/554934420577
+  instagram: https://www.instagram.com/somtecvideo.eletronica
+  facebook: null
+  telefone: +55 49 3442-0577
+  rede: false
+  distancia_km: 0.4
+  ativa: true
+  sem_perfil_publico: false
+- nome: Tendência informática, eletro eletrônicos, móveis e materiais para escritório
+  cidade: Concórdia - SC
+  endereco: Perto Polícia Civil e da Rodoviária - R. Dr. Maruri, 1347 - Centro, Concórdia
+    - SC, 89700-158, Brasil
+  site: https://linktr.ee/tendenciaInformatica
+  instagram: null
+  facebook: null
+  telefone: +55 49 99912-1777
+  rede: false
+  distancia_km: 1.0
+  ativa: true
+  sem_perfil_publico: true
+- nome: Unicenter Informática
+  cidade: Concórdia - SC
+  endereco: R. Osvaldo Valentim Zandavalli, 43 - Sl 02 - Centro, Concórdia - SC, 89700-136,
+    Brasil
+  site: null
+  instagram: https://www.instagram.com/unicenterinformatica
+  facebook: null
+  telefone: +55 49 3444-5175
+  rede: false
+  distancia_km: 0.8
+  ativa: true
+  sem_perfil_publico: false
+- nome: Vancin Informática agora Vancin Soluções em T.I
+  cidade: Concórdia - SC
+  endereco: R. Pref. Domingos Machado de Lima, 533 - Centro, Concórdia - SC, 89700-023,
+    Brasil
+  site: http://www.vancin.com.br/
+  instagram: null
+  facebook: null
+  telefone: +55 49 3444-9453
+  rede: false
+  distancia_km: 0.4
+  ativa: true
+  sem_perfil_publico: true
+- nome: Andrade cell
+  cidade: Erechim - RS
+  endereco: Av. Sete de Setembro, 44 s - Centro, Erechim - RS, 99709-220, Brasil
+  site: null
+  instagram: https://www.instagram.com/andradecell63
+  facebook: null
+  telefone: +55 54 99339-2824
+  rede: false
+  distancia_km: 50.8
+  ativa: true
+  sem_perfil_publico: false
+- nome: Arroba Tech Informática
+  cidade: Erechim - RS
+  endereco: Av. Comandante Kramer, 110 - Centro, Erechim - RS, 99700-000, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 54 3522-2212
+  rede: false
+  distancia_km: 50.6
+  ativa: true
+  sem_perfil_publico: true
+- nome: Berlanda
+  cidade: Erechim - RS
+  endereco: Av. Maurício Cardoso, 195 - Centro, Erechim - RS, 99700-000, Brasil
+  site: null
+  instagram: https://www.instagram.com/berlanda.erechim
+  facebook: null
+  telefone: +55 54 3321-3968
+  rede: true
+  distancia_km: 50.6
+  ativa: true
+  sem_perfil_publico: false
+- nome: Bhg Informática
+  cidade: Erechim - RS
+  endereco: Av. Pedro Pinto de Souza, 285 - Centro, Erechim - RS, 99700-096, Brasil
+  site: null
+  instagram: https://www.instagram.com/bhginformatica66
+  facebook: null
+  telefone: +55 54 3522-3590
+  rede: false
+  distancia_km: 51.1
+  ativa: true
+  sem_perfil_publico: false
+- nome: CDMania Informática
+  cidade: Erechim - RS
+  endereco: R. Nelson Ehlers, 172 - Centro, Erechim - RS, 99700-398, Brasil
+  site: http://cdmaniainformatica.com.br/
+  instagram: https://www.instagram.com/cdmania_info
+  facebook: null
+  telefone: +55 54 99618-2029
+  rede: false
+  distancia_km: 50.5
+  ativa: true
+  sem_perfil_publico: false
+- nome: CenterCel
+  cidade: Erechim - RS
+  endereco: Av. Maurício Cardoso, 288 - Centro, Erechim - RS, 99700-012, Brasil
+  site: https://facebook.com/Centercelcel/?modal=admin_todo_tour
+  instagram: null
+  facebook: https://www.facebook.com/Centercelcel
+  telefone: +55 54 99919-4541
+  rede: false
+  distancia_km: 50.6
+  ativa: true
+  sem_perfil_publico: false
+- nome: Central Celulares
+  cidade: Erechim - RS
+  endereco: Rua Marechal Floriano, 301 - Centro, Erechim - RS, 99700-236, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 54 3712-7712
+  rede: false
+  distancia_km: 51.4
+  ativa: true
+  sem_perfil_publico: true
+- nome: Click Informática
+  cidade: Erechim - RS
+  endereco: R. Dr. Sidney Guerra, 148 - José Bonifácio, Erechim - RS, 99700-000, Brasil
+  site: null
+  instagram: https://www.instagram.com/clickinformaticaerechim
+  facebook: null
+  telefone: +55 54 3522-0700
+  rede: false
+  distancia_km: 49.8
+  ativa: true
+  sem_perfil_publico: false
+- nome: Concel Celulares
+  cidade: Erechim - RS
+  endereco: Av. Tiradentes, 340 - Sala 6 - Centro, Erechim - RS, 99700-000, Brasil
+  site: null
+  instagram: https://www.instagram.com/concelcelulares
+  facebook: null
+  telefone: +55 54 3519-3189
+  rede: false
+  distancia_km: 50.3
+  ativa: true
+  sem_perfil_publico: false
+- nome: Datacenter Informática
+  cidade: Erechim - RS
+  endereco: R. Itália, 319 - Centro, Erechim - RS, 99700-058, Brasil
+  site: https://www.instagram.com/datacenterinformatica/
+  instagram: https://www.instagram.com/datacenterinformatica
+  facebook: null
+  telefone: +55 54 99115-0976
+  rede: false
+  distancia_km: 50.9
+  ativa: true
+  sem_perfil_publico: false
+- nome: Dualtrix Celulares e Informática
+  cidade: Erechim - RS
+  endereco: R. Severiano de Almeida, 456 - Centro, Erechim - RS, 99700-406, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 54 99165-0854
+  rede: false
+  distancia_km: 50.0
+  ativa: true
+  sem_perfil_publico: true
+- nome: ELETRONICA LAZZARIN
+  cidade: Erechim - RS
+  endereco: R. Portugal, 408 - Centro, Erechim - RS, 99700-030, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 54 3522-5185
+  rede: false
+  distancia_km: 50.7
+  ativa: true
+  sem_perfil_publico: true
+- nome: ELETRÔNICA BRASÍLIA
+  cidade: Erechim - RS
+  endereco: Av. Comandante Kramer, 257 - Centro, Erechim - RS, 99700-372, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 54 3522-1566
+  rede: false
+  distancia_km: 50.5
+  ativa: true
+  sem_perfil_publico: true
+- nome: ELETRÔNICA TECNOPLASMA
+  cidade: Erechim - RS
+  endereco: Av. Pedro Pinto de Souza, 511 - Centro, Erechim - RS, 99700-000, Brasil
+  site: null
+  instagram: https://www.instagram.com/eletronicatecnoplasma
+  facebook: null
+  telefone: +55 54 3015-3555
+  rede: false
+  distancia_km: 51.3
+  ativa: true
+  sem_perfil_publico: false
+- nome: Eletrônica Apollo 11 Ltda
+  cidade: Erechim - RS
+  endereco: R. Aratiba, 380 - Centro, Erechim - RS, 99700-018, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 54 3522-1560
+  rede: false
+  distancia_km: 50.7
+  ativa: true
+  sem_perfil_publico: true
+- nome: Eletrônica Bernardi
+  cidade: Erechim - RS
+  endereco: Frente ao Posto BR, Av. José Oscár Salazar, 951 - Três Vendas, Erechim
+    - RS, 99713-042, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 54 3321-4776
+  rede: false
+  distancia_km: 52.3
+  ativa: true
+  sem_perfil_publico: true
+- nome: Eletrônica Erechim
+  cidade: Erechim - RS
+  endereco: Av. Sete de Setembro, 55 - Centro, Erechim - RS, 99700-084, Brasil
+  site: https://www.instagram.com/EletronicaErechim/
+  instagram: https://www.instagram.com/EletronicaErechim
+  facebook: null
+  telefone: +55 54 3321-1933
+  rede: false
+  distancia_km: 50.8
+  ativa: true
+  sem_perfil_publico: false
+- nome: Eletrônica Universal
+  cidade: Erechim - RS
+  endereco: R. Valentim Zambonatto, 24 - Centro, Erechim - RS, 99700-000, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 54 3321-5719
+  rede: false
+  distancia_km: 50.6
+  ativa: true
+  sem_perfil_publico: true
+- nome: Era Digital Informática
+  cidade: Erechim - RS
+  endereco: R. Andradas, 52 - Centro, Erechim - RS, 99700-088, Brasil
+  site: https://wa.me/5554992216699
+  instagram: https://www.instagram.com/lojaeradigital
+  facebook: null
+  telefone: +55 54 99221-6699
+  rede: false
+  distancia_km: 51.0
+  ativa: true
+  sem_perfil_publico: false
+- nome: Erecapas Celulares e Acessórios
+  cidade: Erechim - RS
+  endereco: R. Tôrres Gonçalves, 48 - Centro, Erechim - RS, 99700-422, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 54 99156-5635
+  rede: false
+  distancia_km: 50.5
+  ativa: true
+  sem_perfil_publico: true
+- nome: G5 CELULAR
+  cidade: Erechim - RS
+  endereco: R. Victório Luiz Zaffari, 1117 - Três Vendas, Erechim - RS, 99700-000,
+    Brasil
+  site: https://www.instagram.com/gilsoalbuquerque/
+  instagram: https://www.instagram.com/gilsoalbuquerque
+  facebook: null
+  telefone: +55 54 99998-1457
+  rede: false
+  distancia_km: 52.7
+  ativa: true
+  sem_perfil_publico: false
+- nome: HF Eletrodomésticos
+  cidade: Erechim - RS
+  endereco: R. Itália, 351 - Centro, Erechim - RS, 99700-058, Brasil
+  site: https://www.hfeletrodomesticos.com/
+  instagram: https://www.instagram.com/hfeletrodomesticos
+  facebook: null
+  telefone: +55 54 98433-6416
+  rede: false
+  distancia_km: 50.9
+  ativa: true
+  sem_perfil_publico: false
+- nome: Havan Erechim
+  cidade: Erechim - RS
+  endereco: BR-153, 241 - Bela Vista, Erechim - RS, 99704-190, Brasil
+  site: https://www.havan.com.br/?utm_source=gmb&utm_medium=gmb-perfil&utm_campaign=lc_174
+  instagram: https://www.instagram.com/havanerechimoficial
+  facebook: null
+  telefone: +55 54 3513-1505
+  rede: true
+  distancia_km: 50.9
+  ativa: true
+  sem_perfil_publico: false
+- nome: Info Center Informática
+  cidade: Erechim - RS
+  endereco: Próximo Caixa D'águaCorsan - Rua Paraná, 74 - Sl 1 - Erechim, RS, 99700-294,
+    Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 54 3519-6700
+  rede: false
+  distancia_km: 51.0
+  ativa: true
+  sem_perfil_publico: true
+- nome: Informatica Global Tecnologia
+  cidade: Erechim - RS
+  endereco: Rua Paraná, 157 - Centro, Erechim - RS, 99700-000, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 54 3519-1550
+  rede: false
+  distancia_km: 51.0
+  ativa: true
+  sem_perfil_publico: true
+- nome: JJ Celulares
+  cidade: Erechim - RS
+  endereco: Renan Rafael Amaral, Av. Fausto Demoliner, 241 - Loteamento Dona Olga,
+    Erechim - RS, 99704-771, Brasil
+  site: null
+  instagram: https://www.instagram.com/jjcelulares_erechim
+  facebook: null
+  telefone: +55 54 99692-6337
+  rede: false
+  distancia_km: 47.9
+  ativa: true
+  sem_perfil_publico: false
+- nome: Joe Games
+  cidade: Erechim - RS
+  endereco: Av. Sete de Setembro, 1200 - Sl 40 - Subsolo - Fátima, Erechim - RS, 99709-290,
+    Brasil
+  site: https://www.joegames.com.br/
+  instagram: https://www.instagram.com/lojajoegames
+  facebook: null
+  telefone: +55 54 98123-2403
+  rede: false
+  distancia_km: 51.5
+  ativa: true
+  sem_perfil_publico: false
+- nome: Joetech
+  cidade: Erechim - RS
+  endereco: R. Pedro Álvares Cabral, 263 - Centro, Erechim - RS, 99700-296, Brasil
+  site: http://www.joegames.com.br/
+  instagram: https://www.instagram.com/lojajoetech
+  facebook: null
+  telefone: +55 54 2106-5406
+  rede: false
+  distancia_km: 50.8
+  ativa: true
+  sem_perfil_publico: false
+- nome: Lake Computadores
+  cidade: Erechim - RS
+  endereco: R. Carlos Reichmann, 415 - Santa Catarina, Erechim - RS, 99711-374, Brasil
+  site: https://www.facebook.com/marketplace/profile/100001225680816/?ref=share_attachment
+  instagram: null
+  facebook: https://www.facebook.com/marketplace
+  telefone: +55 55 99953-2696
+  rede: false
+  distancia_km: 51.6
+  ativa: true
+  sem_perfil_publico: false
+- nome: Level Up Store Erechim
+  cidade: Erechim - RS
+  endereco: Av. Sete de Setembro, 1092 - Fátima, Erechim - RS, 99709-290, Brasil
+  site: https://www.instagram.com/levelupstore.erechim
+  instagram: https://www.instagram.com/levelupstore.erechim
+  facebook: null
+  telefone: +55 54 99617-3084
+  rede: false
+  distancia_km: 51.5
+  ativa: true
+  sem_perfil_publico: false
+- nome: Lojas Benoit
+  cidade: Erechim - RS
+  endereco: Av. José Oscár Salazar, 539 - Vendas, Erechim - RS, 99713-042, Brasil
+  site: https://loja.benoit.com.br/190
+  instagram: https://www.instagram.com/lojasbenoit_erechim
+  facebook: null
+  telefone: +55 54 99966-4654
+  rede: true
+  distancia_km: 52.1
+  ativa: true
+  sem_perfil_publico: false
+- nome: Lojas Colombo
+  cidade: Erechim - RS
+  endereco: Av. Maurício Cardoso, 350 - Centro, Erechim - RS, 99700-000, Brasil
+  site: https://www.colombo.com.br/nossas-lojas/rs/erechim/loja-67
+  instagram: null
+  facebook: null
+  telefone: +55 54 97603-3625
+  rede: true
+  distancia_km: 50.5
+  ativa: true
+  sem_perfil_publico: true
+- nome: Lojas Volpato
+  cidade: Erechim - RS
+  endereco: Av. Maurício Cardoso, 204 - Centro, Erechim - RS, 99700-000, Brasil
+  site: null
+  instagram: https://www.instagram.com/volpato_erechim
+  facebook: null
+  telefone: +55 54 3321-1077
+  rede: false
+  distancia_km: 50.6
+  ativa: true
+  sem_perfil_publico: false
+- nome: MEGACELL Erechim
+  cidade: Erechim - RS
+  endereco: Av. Maurício Cardoso, 389 - Centro, Erechim - RS, 99700-426, Brasil
+  site: null
+  instagram: https://www.instagram.com/megacellerechim
+  facebook: null
+  telefone: +55 54 99143-2724
+  rede: false
+  distancia_km: 50.5
+  ativa: true
+  sem_perfil_publico: false
+- nome: Max Games
+  cidade: Erechim - RS
+  endereco: R. Aratiba, 368 - Centro, Erechim - RS, 99700-018, Brasil
+  site: null
+  instagram: https://www.instagram.com/max_gam3s
+  facebook: null
+  telefone: +55 54 3712-5490
+  rede: false
+  distancia_km: 50.7
+  ativa: true
+  sem_perfil_publico: false
+- nome: Megabyte Informática
+  cidade: Erechim - RS
+  endereco: R. Nelson Ehlers, 374 - sala 02 - Centro, Erechim - RS, 99700-398, Brasil
+  site: http://www.megabyteinformatica.com/
+  instagram: null
+  facebook: null
+  telefone: +55 54 2106-5773
+  rede: false
+  distancia_km: 50.3
+  ativa: true
+  sem_perfil_publico: true
+- nome: Mundo Eletrônico
+  cidade: Erechim - RS
+  endereco: Av. Maurício Cardoso, 77 - Centro, Erechim - RS, 99700-426, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 54 99653-8454
+  rede: false
+  distancia_km: 50.7
+  ativa: true
+  sem_perfil_publico: true
+- nome: OFicina do PC - Soluções em Informática
+  cidade: Erechim - RS
+  endereco: R. David Pinto de Souza, 590 - Sl 02 - Ceramica, Erechim - RS, 99709-522,
+    Brasil
+  site: http://www.oficinadopc.inf.br/
+  instagram: null
+  facebook: null
+  telefone: +55 54 3522-2535
+  rede: false
+  distancia_km: 52.6
+  ativa: true
+  sem_perfil_publico: true
+- nome: Pc-Informatica Soluções Corporativas
+  cidade: Erechim - RS
+  endereco: R. Itália, 96 - Centro, Erechim - RS, 99700-014, Brasil
+  site: https://pcinformaticaerechim.com.br/
+  instagram: null
+  facebook: null
+  telefone: +55 54 3519-2270
+  rede: false
+  distancia_km: 50.7
+  ativa: true
+  sem_perfil_publico: true
+- nome: Perfil Informática
+  cidade: Erechim - RS
+  endereco: R. Léo Neuls, 1165 - Aldo Arioli, Erechim - RS, 99711-165, Brasil
+  site: https://www.facebook.com/perfilerechim/
+  instagram: null
+  facebook: https://www.facebook.com/perfilerechim
+  telefone: +55 54 3522-4812
+  rede: false
+  distancia_km: 52.6
+  ativa: true
+  sem_perfil_publico: false
+- nome: Ponto Informática e Eletrônica
+  cidade: Erechim - RS
+  endereco: Av. 15 de Novembro, 670 - Centro, Erechim - RS, 99700-308, Brasil
+  site: https://www.facebook.com/profile.php?id=100054219427869
+  instagram: null
+  facebook: null
+  telefone: +55 54 99955-7462
+  rede: false
+  distancia_km: 50.7
+  ativa: true
+  sem_perfil_publico: true
+- nome: Rubão & lu....especializada na compra ( venda ) de Games e Acessórios!
+  cidade: Erechim - RS
+  endereco: R. Santos Dumont - Erechim, RS, 99709-389, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: null
+  rede: false
+  distancia_km: 52.7
+  ativa: true
+  sem_perfil_publico: true
+- nome: Schumann - Erechim
+  cidade: Erechim - RS
+  endereco: Av. Maurício Cardoso, 220 - Centro, Erechim - RS, 99700-000, Brasil
+  site: https://www.schumann.com.br/?utm_source=Google%20Maps&utm_medium=36
+  instagram: https://www.instagram.com/schumann.erechim
+  facebook: null
+  telefone: +55 49 99161-0878
+  rede: false
+  distancia_km: 50.6
+  ativa: true
+  sem_perfil_publico: false
+- nome: Smart Center Erechim
+  cidade: Erechim - RS
+  endereco: Av. Sete de Setembro, 901 - Sl 27 - Centro, Erechim - RS, 99700-234, Brasil
+  site: null
+  instagram: null
+  facebook: null
+  telefone: +55 54 99199-9595
+  rede: false
+  distancia_km: 51.4
+  ativa: true
+  sem_perfil_publico: true
+- nome: Smart House Celulares e Acessórios
+  cidade: Erechim - RS
+  endereco: R. Itália, 185 - Centro, Erechim - RS, 99700-016, Brasil
+  site: https://www.instagram.com/smarthouseerechim/
+  instagram: https://www.instagram.com/smarthouseerechim
+  facebook: null
+  telefone: +55 54 99965-2200
+  rede: false
+  distancia_km: 50.8
+  ativa: true
+  sem_perfil_publico: false
+- nome: Sos celulares Erechim
+  cidade: Erechim - RS
+  endereco: Av. Maurício Cardoso - Erechim, RS, 99700-012, Brasil
+  site: null
+  instagram: https://www.instagram.com/soscelulares_erechim
+  facebook: null
+  telefone: +55 54 99941-3242
+  rede: false
+  distancia_km: 50.6
+  ativa: true
+  sem_perfil_publico: false
+- nome: Tecfone / Telseg Serviço e Comércio de Equipamentos de Telefonia LTDA
+  cidade: Erechim - RS
+  endereco: R. Firmino Girardello, 142 - José Bonifácio, Erechim - RS, 99701-654,
+    Brasil
+  site: https://lojalocal.com/parceirocredenciadointelbras/16721444000156
+  instagram: null
+  facebook: null
+  telefone: +55 54 3321-0366
+  rede: false
+  distancia_km: 48.8
+  ativa: true
+  sem_perfil_publico: true
+- nome: Tecno Shop Eletrônicos
+  cidade: Erechim - RS
+  endereco: Av. Maurício Cardoso, 225 - Centro, Erechim - RS, 99700-426, Brasil
+  site: https://www.instagram.com/tecnoshoperechim/
+  instagram: https://www.instagram.com/tecnoshoperechim
+  facebook: null
+  telefone: +55 54 99339-8077
+  rede: false
+  distancia_km: 50.6
+  ativa: true
+  sem_perfil_publico: false
+- nome: Vendedor de Jogos
+  cidade: Erechim - RS
+  endereco: Rua Carlos Kehlers, 499 - Centro, Erechim - RS, 99700-000, Brasil
+  site: http://www.orkut.com/
+  instagram: null
+  facebook: null
+  telefone: +55 54 2106-1845
+  rede: false
+  distancia_km: 50.1
+  ativa: true
+  sem_perfil_publico: true
+- nome: iPhones Erechim
+  cidade: Erechim - RS
+  endereco: Rua João Pessoa, 165 - Sl 2 - Centro, Erechim - RS, 99700-220, Brasil
+  site: http://www.iphoneserechim.com.br/
+  instagram: https://www.instagram.com/iphoneserechim
+  facebook: null
+  telefone: +55 54 99700-1214
+  rede: false
+  distancia_km: 51.6
+  ativa: true
+  sem_perfil_publico: false

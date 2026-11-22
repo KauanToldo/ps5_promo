@@ -37,3 +37,22 @@ def heartbeat_text(week_min: dict | None, total_sources: int, failed: int) -> st
     if week_min:
         return f"{base}\nMenor preço da semana: {brl(week_min['total'])} em {week_min['store']}"
     return base + "\nSem preços válidos na semana."
+
+
+def physical_text(o: Offer, limit: float) -> str:
+    when = o.collected_at.astimezone(ZoneInfo("America/Sao_Paulo")).strftime("%d/%m/%Y %H:%M")
+    tag = "PROMOÇÃO EM LOJA FÍSICA" + ("" if o.priority == "alta" else " (VERIFICAR NA LOJA)")
+    dist = (f" (~{o.distance_km:.0f} km de Concórdia, em linha reta)"
+            if o.distance_km and not str(o.city).startswith("Concórdia") else "")
+    lines = [tag, f"Loja: {o.store}", f"Cidade: {o.city}{dist}"]
+    if o.price_cash is not None:
+        lines.append(f"Preço: {brl(o.price_cash)} ({o.payment or 'pagamento não informado'})")
+    else:
+        lines.append(f"Preço: não identificado no post (limite {brl(limit)})")
+    if o.validity:
+        lines.append(f"Validade: {o.validity}")
+    lines += [f"Post: {o.url}", f"Data da postagem: {o.posted}", f"Coletado em: {when}",
+              "Confirme preço e estoque com a loja antes de ir."]
+    if o.warnings:
+        lines.append("Avisos: " + "; ".join(o.warnings))
+    return "\n".join(lines)

@@ -78,3 +78,30 @@ def status_html(offers: list[Offer], limit: float, sources: list[tuple[str, str,
 <div style="font-size:12px;color:#6b7280;letter-spacing:1px;margin:20px 0 4px">FONTES</div>
 <table width="100%" cellpadding="0" cellspacing="0">{rows}</table>"""
     return _shell(title, body)
+
+
+def physical_html(o: Offer, limit: float) -> str:
+    verify = o.priority != "alta"
+    accent = AMBER if verify else GREEN
+    dist = (f" · ~{o.distance_km:.0f} km de Concórdia (linha reta)"
+            if o.distance_km and not str(o.city).startswith("Concórdia") else "")
+    price = (f'<div style="font-size:34px;font-weight:800;color:{accent}">{brl(o.price_cash)}</div>'
+             f'<div style="font-size:13px;color:#374151">{escape(o.payment or "pagamento não informado")}</div>'
+             if o.price_cash is not None else
+             f'<div style="font-size:18px;font-weight:700;color:{accent}">Preço não identificado no post</div>'
+             f'<div style="font-size:13px;color:#374151">Limite: {brl(limit)}</div>')
+    badges = "".join(_badge(w, RED if "VERIFICAR" in w else AMBER) for w in o.warnings)
+    rows = "".join(
+        f'<tr><td style="padding:4px 0;color:#6b7280;font-size:13px">{k}</td>'
+        f'<td style="padding:4px 0;font-size:13px;text-align:right">{escape(str(v))}</td></tr>'
+        for k, v in (("Postado em", o.posted), ("Validade", o.validity or "não informada")))
+    body = f"""
+<div style="font-size:18px;font-weight:700">{escape(o.store)}</div>
+<div style="font-size:13px;color:#6b7280;margin-bottom:14px">{escape(str(o.city))}{dist}</div>
+<div style="background:{accent}14;border:1px solid {accent}55;border-radius:12px;padding:16px 18px;margin-bottom:14px">{price}</div>
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:12px">{rows}</table>
+<div style="margin-bottom:16px">{badges}</div>
+<a href="{escape(o.url)}" style="display:inline-block;background:{BLUE};color:#fff;text-decoration:none;font-weight:600;padding:12px 22px;border-radius:10px">Ver post</a>
+<div style="background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:10px 14px;margin-top:18px;font-size:13px;color:#92400e">
+Confirme preço e estoque com a loja antes de ir.</div>"""
+    return _shell("PROMOÇÃO EM LOJA FÍSICA" + (" · verificar" if verify else ""), body, accent)
