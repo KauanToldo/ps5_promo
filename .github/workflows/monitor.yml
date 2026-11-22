@@ -26,6 +26,9 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - name: Instalar Chromium (Playwright)
+        run: playwright install --with-deps chromium
+
       # Estado (histórico/alertas) fica na branch `state`, montada em ./data
       - name: Carregar estado
         run: |
@@ -42,6 +45,8 @@ jobs:
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
           CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+          ML_CLIENT_ID: ${{ secrets.ML_CLIENT_ID }}
+          ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
           CEP: ${{ secrets.CEP }}
           LIMITE_PRECO: ${{ vars.LIMITE_PRECO }}
         run: python main.py --state data/state.json

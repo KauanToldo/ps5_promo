@@ -9,13 +9,15 @@ preço **<= R$ 3.800** (limite configurável).
 
 | Fonte | Estado | Observação |
 |---|---|---|
-| Zoom | ✅ funciona | Agregador (Magalu, Amazon, KaBuM etc.). Preço de vitrine: não diz se é Pix ou parcelado. |
-| Buscapé | ✅ funciona | Mesma plataforma/dados do Zoom (redundância). |
+| Zoom / Buscapé | ✅ funciona | Agregadores (Magalu, Amazon, KaBuM etc.). Preço de vitrine: não distingue Pix de parcelado. |
 | KaBuM! | ✅ funciona | Preço à vista (com desconto) e cheio separados. |
-| Havan | ❌ não viável simples | Resultados carregados por JavaScript. Exigiria Playwright. |
-| Mercado Livre | ❌ bloqueado | API de busca devolve 403 e o HTML redireciona para login. |
-| Amazon, Shopee, AliExpress | ❌ não tentadas | Bloqueiam IP de datacenter (GitHub Actions). Cobertas só via Zoom/Buscapé quando listadas. |
-| Americanas, Casas Bahia, Ponto, Fast Shop, Carrefour, Submarino, Magalu | 🟡 indireto | Aparecem via Zoom/Buscapé; sem módulo próprio ainda. |
+| Amazon | ✅ via Playwright | `requests` é barrado por bot-check; usa navegador headless. Vendedor (Amazon x terceiro) não é verificado: aviso no alerta. Importados ("International") são excluídos. |
+| Havan | ✅ via Playwright | Só lista PS5 com disco hoje; o filtro descarta. Funciona quando aparecer o Digital. |
+| AliExpress | ✅ via Playwright (melhor esforço) | Resultados dominados por acessórios. Todo alerta leva aviso de importação/terceiro. |
+| Mercado Livre | 🔑 API oficial, precisa de credenciais | HTML e API pública bloqueados (403/verificação). Com `ML_CLIENT_ID`/`ML_CLIENT_SECRET` usa a API; só loja oficial ou reputação verde. Sem credenciais é pulado. |
+| Magalu (direto) | ❌ bloqueado | 403 até com navegador real; coberto só via Zoom/Buscapé. |
+| Shopee | ❌ não tentada | Anti-bot agressivo. |
+| Americanas, Casas Bahia, Ponto, Fast Shop, Carrefour, Submarino | 🟡 indireto | Aparecem via Zoom/Buscapé quando listados. |
 | Girafa | ❌ sem resposta | Conexão falhou no teste. |
 | Nuuvem / PlayStation Store | ➖ n/a | Não vendem o console. |
 
@@ -30,6 +32,7 @@ previsto como Secret (`CEP`) para quando implementarmos o cálculo por loja.
 
 ```bash
 pip install -r requirements.txt
+playwright install chromium   # Amazon, Havan, AliExpress
 python -m pytest            # testes
 python main.py --dry-run    # consulta as lojas e mostra o que seria enviado (não envia, não grava)
 python main.py --test-notify  # envia mensagem de teste (precisa dos segredos abaixo)
@@ -48,6 +51,7 @@ python main.py --test-notify  # envia mensagem de teste (precisa dos segredos ab
    - `RESEND_API_KEY`: a chave criada
    - `EMAIL_TO`: o e-mail da conta Resend
    - `CEP`: seu CEP (reservado para o cálculo de frete)
+   - (opcional) Mercado Livre: `ML_CLIENT_ID` e `ML_CLIENT_SECRET` (app em developers.mercadolivre.com.br)
    - (opcional) WhatsApp: `NOTIFIER=whatsapp` + `CALLMEBOT_PHONE` + `CALLMEBOT_APIKEY`
 4. **Limite de preço:** edite `limite_preco` em `config.yaml` ou crie a *Variable* `LIMITE_PRECO`.
 5. **Ligar:** Actions → "Monitor PS5" → *Run workflow*. Depois o cron roda a cada 30 min.

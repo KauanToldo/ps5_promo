@@ -19,7 +19,8 @@ import yaml
 from filters import apply_rules
 from messages import alert_text, brl, heartbeat_text
 from notifier import build_notifier
-from sources import REGISTRY
+from sources import REGISTRY, browser
+from sources.base import Skip
 from storage import Storage
 
 log = logging.getLogger("monitor")
@@ -41,15 +42,20 @@ def run(cfg: dict, dry_run: bool, state_path: str) -> int:
     for name, enabled in cfg["fontes"].items():
         if not enabled or name not in REGISTRY:
             continue
-        consulted += 1
         src = REGISTRY[name](cfg)
         try:
-            raw = src.fetch()
+            try:
+                raw = src.fetch()
+            except Skip as why:
+                log.info("%s: pulada (%s)", name, why)
+                continue
+            consulted += 1
             kept = [o for o in (apply_rules(o, cfg) for o in raw) if o]
             log.info("%s: %d anúncios, %d válidos", name, len(raw), len(kept))
             valid += kept
             store.source_result(name, ok=True)
         except Exception as e:  # uma fonte NUNCA derruba as outras
+            consulted += 1
             failed.append(name)
             log.warning("%s: FALHOU (%s)", name, e)
             if store.source_result(name, ok=False, warn_days=cfg["falhas_para_avisar_dias"]):
@@ -57,6 +63,7 @@ def run(cfg: dict, dry_run: bool, state_path: str) -> int:
                               f"{cfg['falhas_para_avisar_dias']}+ dias. Último erro: {e}")
         time.sleep(cfg["http"]["pausa_entre_fontes"])
 
+    browser.close()
     # Zoom e Buscapé repetem anúncios: mantém um por (loja, título, total)
     unique = {}
     for o in sorted(valid, key=lambda o: o.total):

@@ -49,6 +49,11 @@ filtros:
     - bluray
     - blu-ray
     - fat
+    - middle east
+    - international
+    - internacional
+    - importado
+    - importada
     - ps4
     - xbox
   # O título precisa COMEÇAR com um destes (evita acessórios que citam o PS5):
@@ -74,6 +79,7 @@ vendedores_confiaveis:
   - girafa
   - havan
   - sony
+  - aliexpress   # sempre com aviso de importação/terceiro
 exigir_vendedor_confiavel: true
 
 fontes:
@@ -81,5 +87,9 @@ fontes:
   buscape: true
   kabum: true
   # Inviáveis em IP de datacenter / exigem navegador (ver README, seção "Relatório"):
-  mercadolivre: false
-  havan: false
+  amazon: true
+  havan: true
+  aliexpress: true
+  mercadolivre: true   # só roda com ML_CLIENT_ID e ML_CLIENT_SECRET (senão é pulada)
+  # Bloqueada (ver README): magalu direto (403;
+  # o Magalu entra via Zoom/Buscapé).

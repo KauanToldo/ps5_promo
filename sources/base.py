@@ -12,6 +12,10 @@ from models import Offer
 log = logging.getLogger("monitor")
 
 
+class Skip(Exception):
+    """Fonte desativada por falta de configuração (não é falha)."""
+
+
 class Source(ABC):
     name = "base"
 

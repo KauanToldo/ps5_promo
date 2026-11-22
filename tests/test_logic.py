@@ -76,3 +76,31 @@ def test_mensagem_alerta():
     txt = alert_text(o, 3800)
     assert "TOTAL: R$ 3.700,00" in txt and "frete não calculado" in txt
     assert brl(1234.5) == "R$ 1.234,50"
+
+
+def test_mercadolivre_filtra_reputacao_e_condicao():
+    from sources.mercadolivre import MercadoLivre
+    ml = MercadoLivre({"http": {"user_agent": "x"}})
+    items = [
+        {"title": "PS5 Slim Digital", "price": 3700, "condition": "new", "permalink": "u1",
+         "official_store_id": 1, "seller": {"id": 1}},
+        {"title": "PS5 Slim Digital", "price": 3600, "condition": "new", "permalink": "u2",
+         "seller": {"id": 2}},
+        {"title": "PS5 Slim Digital", "price": 3500, "condition": "new", "permalink": "u3",
+         "seller": {"id": 3}},
+        {"title": "PS5 Slim Digital", "price": 3000, "condition": "used", "permalink": "u4",
+         "official_store_id": 1, "seller": {"id": 1}},
+    ]
+    rep = {2: "5_green", 3: "2_orange"}.get
+    got = ml.parse(items, rep)
+    assert [o.url for o in got] == ["u1", "u2"]
+
+
+def test_aliexpress_parse_preco_e_avisos():
+    from sources.aliexpress import AliExpress, parse_price
+    assert parse_price("Console R$3.799,90R$4.000") == 3799.90
+    assert parse_price("x R$174,8 y") == 174.8
+    page = ('<a href="//pt.aliexpress.com/item/123.html?x=1">Console PS5 Slim Digital '
+            'R$3.799,90 vendido</a>')
+    o = AliExpress({"http": {"user_agent": "x"}}).parse(page)[0]
+    assert o.price_cash == 3799.90 and any("IMPORTAÇÃO" in w for w in o.warnings)
