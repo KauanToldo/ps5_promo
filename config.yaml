@@ -90,6 +90,6 @@ fontes:
   amazon: true
   havan: true
   aliexpress: true
-  mercadolivre: true   # só roda com ML_CLIENT_ID e ML_CLIENT_SECRET (senão é pulada)
+  mercadolivre: false  # precisa de ML_CLIENT_ID e ML_CLIENT_SECRET (desativado por ora)
   # Bloqueada (ver README): magalu direto (403;
   # o Magalu entra via Zoom/Buscapé).
