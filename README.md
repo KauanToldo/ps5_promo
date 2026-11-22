@@ -1,6 +1,6 @@
 # Monitor de preço do PS5 Slim Digital
 
-Roda sozinho no GitHub Actions e avisa por WhatsApp quando o PS5 Slim **Digital**, novo, fica com
+Roda sozinho no GitHub Actions e avisa por e-mail (ou WhatsApp) quando o PS5 Slim **Digital**, novo, fica com
 preço **<= R$ 3.800** (limite configurável).
 
 > **Status:** Fase 1 (lojas online). Fase 2 (lojas físicas via Instagram/Facebook) só depois da validação.
@@ -39,14 +39,16 @@ python main.py --test-notify  # envia mensagem de teste (precisa dos segredos ab
 
 1. **Repositório:** crie um repositório **público** no GitHub e suba este projeto
    (nenhum segredo está no código).
-2. **WhatsApp (CallMeBot, grátis):**
-   - Salve o número do bot (divulgado na página oficial quando há vaga) e envie: `I allow callmebot to send me messages`
-     (confira as instruções atuais em https://www.callmebot.com/blog/free-api-whatsapp-messages/).
-   - Você recebe uma **apikey**. Se o bot estiver lotado, use a alternativa Telegram (a ser adicionada).
+2. **E-mail (Resend, grátis, 100 e-mails/dia):**
+   - Crie conta em https://resend.com com o e-mail que vai **receber** os alertas.
+   - Em *API Keys*, crie uma chave (permissão de envio).
+   - Sem domínio próprio, o remetente padrão `onboarding@resend.dev` só envia para o e-mail da
+     própria conta Resend, o que basta aqui.
 3. **Secrets** (Settings → Secrets and variables → Actions → *Secrets*):
-   - `CALLMEBOT_PHONE`: seu número com DDI, ex. `5549999999999`
-   - `CALLMEBOT_APIKEY`: a apikey recebida
+   - `RESEND_API_KEY`: a chave criada
+   - `EMAIL_TO`: o e-mail da conta Resend
    - `CEP`: seu CEP (reservado para o cálculo de frete)
+   - (opcional) WhatsApp: `NOTIFIER=whatsapp` + `CALLMEBOT_PHONE` + `CALLMEBOT_APIKEY`
 4. **Limite de preço:** edite `limite_preco` em `config.yaml` ou crie a *Variable* `LIMITE_PRECO`.
 5. **Ligar:** Actions → "Monitor PS5" → *Run workflow*. Depois o cron roda a cada 30 min.
 6. **Filtros:** palavras incluir/excluir, vendedores confiáveis e preço suspeito ficam em `config.yaml`.
@@ -59,7 +61,7 @@ python main.py --test-notify  # envia mensagem de teste (precisa dos segredos ab
   Preço abaixo de R$ 2.500 não é descartado: sai marcado **SUSPEITO**.
 - `storage.py`: estado em `state.json` na branch `state`. Anti-spam: mesmo anúncio+preço só 1x/24h,
   preço menor reenvia na hora, heartbeat semanal, aviso único se uma fonte falhar por 3+ dias.
-- `notifier/`: camada abstrata (`Notifier`); hoje CallMeBot. Para Telegram/e-mail, crie outra subclasse.
+- `notifier/`: camada abstrata (`Notifier`); e-mail via Resend (padrão) e WhatsApp via CallMeBot (opcional). Para Telegram/e-mail, crie outra subclasse.
 
 ## Frequência e custo
 
