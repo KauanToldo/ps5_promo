@@ -40,9 +40,9 @@ python main.py --test-notify  # envia mensagem de teste (precisa dos segredos ab
 1. **Repositório:** crie um repositório **público** no GitHub e suba este projeto
    (nenhum segredo está no código).
 2. **WhatsApp (CallMeBot, grátis):**
-   - Salve o contato **+34 644 51 95 23** e envie: `I allow callmebot to send me messages`
+   - Salve o número do bot (divulgado na página oficial quando há vaga) e envie: `I allow callmebot to send me messages`
      (confira as instruções atuais em https://www.callmebot.com/blog/free-api-whatsapp-messages/).
-   - Você recebe uma **apikey**.
+   - Você recebe uma **apikey**. Se o bot estiver lotado, use a alternativa Telegram (a ser adicionada).
 3. **Secrets** (Settings → Secrets and variables → Actions → *Secrets*):
    - `CALLMEBOT_PHONE`: seu número com DDI, ex. `5549999999999`
    - `CALLMEBOT_APIKEY`: a apikey recebida
