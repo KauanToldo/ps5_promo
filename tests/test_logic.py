@@ -104,3 +104,21 @@ def test_aliexpress_parse_preco_e_avisos():
             'R$3.799,90 vendido</a>')
     o = AliExpress({"http": {"user_agent": "x"}}).parse(page)[0]
     assert o.price_cash == 3799.90 and any("IMPORTAÇÃO" in w for w in o.warnings)
+
+
+def test_terabyte_parse_estoque():
+    from sources.terabyte import Terabyte
+
+    def box(title, price_html, extra=""):
+        return (f'<div class="product-item__box"><div>{extra}</div>'
+                f'<a class="product-item__name" href="/produto/1/x" title="{title}"><h2>{title}</h2></a>'
+                f'<div class="product-item__new-price">{price_html}</div></div>')
+
+    page = "<html><body>" + box("Console PS5 Slim Digital", "<span>R$ 3.799,90</span>") + box(
+        "Console PS5 Slim Digital Esgotado", "<span>Indisponível</span>",
+        '<div class="esgotadoL">Esgotado</div>') + box(
+        "Outro esgotado com preço", "<span>R$ 4.000,00</span>",
+        '<div class="esgotadoL">Esgotado</div>') + "</body></html>"
+    got = Terabyte({"http": {"user_agent": "x"}}).parse(page)
+    assert len(got) == 2 and got[0].price_cash == 3799.90 and got[0].in_stock
+    assert not got[1].in_stock

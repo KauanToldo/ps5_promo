@@ -14,7 +14,9 @@ preço **<= R$ 3.800** (limite configurável).
 | Amazon | ✅ via Playwright | `requests` é barrado por bot-check; usa navegador headless. Vendedor (Amazon x terceiro) não é verificado: aviso no alerta. Importados ("International") são excluídos. |
 | Havan | ✅ via Playwright | Só lista PS5 com disco hoje; o filtro descarta. Funciona quando aparecer o Digital. |
 | AliExpress | ✅ via Playwright (melhor esforço) | Resultados dominados por acessórios. Todo alerta leva aviso de importação/terceiro. |
-| Mercado Livre | 🔑 API oficial, precisa de credenciais | HTML e API pública bloqueados (403/verificação). Com `ML_CLIENT_ID`/`ML_CLIENT_SECRET` usa a API; só loja oficial ou reputação verde. Sem credenciais é pulado. |
+| Terabyte Shop | ✅ funciona | Vende o console, hoje esgotado (sem preço). Detecta quando voltar ao estoque. |
+| Pichau | ❌ bloqueada | 403 até com navegador real; não vamos contornar. |
+| Mercado Livre | ⏸ desativado | API oficial implementada, mas sem credenciais | HTML e API pública bloqueados (403/verificação). Com `ML_CLIENT_ID`/`ML_CLIENT_SECRET` usa a API; só loja oficial ou reputação verde. Sem credenciais é pulado. |
 | Magalu (direto) | ❌ bloqueado | 403 até com navegador real; coberto só via Zoom/Buscapé. |
 | Shopee | ❌ não tentada | Anti-bot agressivo. |
 | Americanas, Casas Bahia, Ponto, Fast Shop, Carrefour, Submarino | 🟡 indireto | Aparecem via Zoom/Buscapé quando listados. |
