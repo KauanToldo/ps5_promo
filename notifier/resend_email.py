@@ -26,11 +26,11 @@ class ResendEmail(Notifier):
             raise RuntimeError("Defina RESEND_API_KEY e EMAIL_TO (veja o README).")
         return cls(key, to, os.environ.get("EMAIL_FROM") or cls.__init__.__defaults__[0])
 
-    def send(self, text: str) -> None:
+    def send(self, text: str, html: str | None = None) -> None:
         subject = text.strip().splitlines()[0][:150]
         r = requests.post(API, timeout=30,
                           headers={"Authorization": f"Bearer {self.api_key}"},
-                          json={"from": self.sender, "to": [self.to],
-                                "subject": subject, "text": text})
+                          json={"from": self.sender, "to": [self.to], "subject": subject,
+                                "text": text, **({"html": html} if html else {})})
         if r.status_code >= 300:
             raise RuntimeError(f"Resend falhou: {r.status_code} {r.text[:200]}")

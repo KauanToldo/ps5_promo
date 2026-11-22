@@ -24,7 +24,7 @@ class CallMeBot(Notifier):
             raise RuntimeError("Defina CALLMEBOT_PHONE e CALLMEBOT_APIKEY (veja o README).")
         return cls(phone, key)
 
-    def send(self, text: str) -> None:
+    def send(self, text: str, html: str | None = None) -> None:
         r = requests.get(API, params={"phone": self.phone, "text": text, "apikey": self.apikey},
                          timeout=30)
         if r.status_code != 200:

@@ -17,6 +17,7 @@ from pathlib import Path
 import yaml
 
 from filters import apply_rules
+from emailhtml import alert_html, status_html
 from messages import alert_text, brl, heartbeat_text
 from notifier import build_notifier
 from sources import REGISTRY, browser
@@ -33,11 +34,11 @@ def load_config(path: str = "config.yaml") -> dict:
     return cfg
 
 
-def run(cfg: dict, dry_run: bool, state_path: str) -> int:
+def run(cfg: dict, dry_run: bool, state_path: str, force_status: bool = False) -> int:
     notifier = build_notifier(dry_run)
     store = Storage(state_path)
     limit = cfg["limite_preco"]
-    valid, consulted, failed = [], 0, []
+    valid, consulted, failed, report = [], 0, [], []
 
     for name, enabled in cfg["fontes"].items():
         if not enabled or name not in REGISTRY:
@@ -48,16 +49,19 @@ def run(cfg: dict, dry_run: bool, state_path: str) -> int:
                 raw = src.fetch()
             except Skip as why:
                 log.info("%s: pulada (%s)", name, why)
+                report.append((name, "info", f"pulada: {why}"))
                 continue
             consulted += 1
             kept = [o for o in (apply_rules(o, cfg) for o in raw) if o]
             log.info("%s: %d anúncios, %d válidos", name, len(raw), len(kept))
+            report.append((name, "ok", f"{len(raw)} anúncios, {len(kept)} válidos"))
             valid += kept
             store.source_result(name, ok=True)
         except Exception as e:  # uma fonte NUNCA derruba as outras
             consulted += 1
             failed.append(name)
             log.warning("%s: FALHOU (%s)", name, e)
+            report.append((name, "falha", str(e)[:60]))
             if store.source_result(name, ok=False, warn_days=cfg["falhas_para_avisar_dias"]):
                 notifier.send(f"⚠️ Monitor PS5: a fonte '{name}' está falhando há "
                               f"{cfg['falhas_para_avisar_dias']}+ dias. Último erro: {e}")
@@ -74,16 +78,18 @@ def run(cfg: dict, dry_run: bool, state_path: str) -> int:
     for o in valid:
         if o.total <= limit and store.should_alert(o, cfg["alerta_duplicado_horas"]):
             try:
-                notifier.send(alert_text(o, limit))
+                notifier.send(alert_text(o, limit), alert_html(o, limit))
                 store.mark_alerted(o)
                 sent += 1
             except Exception as e:
                 log.error("falha ao enviar alerta: %s", e)
 
-    if store.heartbeat_due(cfg["heartbeat_dias"]):
+    if force_status or store.heartbeat_due(cfg["heartbeat_dias"]):
         try:
-            notifier.send(heartbeat_text(store.week_min(cfg["heartbeat_dias"]), consulted, len(failed)))
-            store.mark_heartbeat()
+            notifier.send(heartbeat_text(store.week_min(cfg["heartbeat_dias"]), consulted, len(failed)),
+                          status_html(valid, limit, report, "✅ Monitor ativo (resumo semanal)"))
+            if not force_status:
+                store.mark_heartbeat()
         except Exception as e:
             log.error("falha no heartbeat: %s", e)
 
@@ -104,6 +110,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--test-notify", action="store_true")
+    ap.add_argument("--status", action="store_true", help="envia e-mail de status agora")
     ap.add_argument("--refresh-stores", action="store_true")
     ap.add_argument("--config", default="config.yaml")
     ap.add_argument("--state", default="data/state.json")
@@ -115,7 +122,7 @@ def main() -> int:
     if a.test_notify:
         build_notifier(a.dry_run).send("🎮 Teste do monitor PS5: se você recebeu isto, o WhatsApp está ok.")
         return 0
-    return run(load_config(a.config), a.dry_run, a.state)
+    return run(load_config(a.config), a.dry_run, a.state, a.status)
 
 
 if __name__ == "__main__":
