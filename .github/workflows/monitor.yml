@@ -1,0 +1,55 @@
+name: Monitor PS5
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # a cada 30 min (o Actions pode atrasar)
+  workflow_dispatch:
+
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      # Estado (histórico/alertas) fica na branch `state`, montada em ./data
+      - name: Carregar estado
+        run: |
+          if git ls-remote --exit-code --heads origin state >/dev/null 2>&1; then
+            git fetch origin state
+            git worktree add data state
+          else
+            git worktree add --orphan -b state data
+          fi
+
+      - name: Rodar monitor
+        env:
+          CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
+          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+          CEP: ${{ secrets.CEP }}
+          LIMITE_PRECO: ${{ vars.LIMITE_PRECO }}
+        run: python main.py --state data/state.json
+
+      # Commit do estado: também conta como atividade e evita a desativação do cron (60 dias)
+      - name: Salvar estado
+        if: always()
+        working-directory: data
+        run: |
+          git config user.name "monitor-bot"
+          git config user.email "monitor-bot@users.noreply.github.com"
+          git add state.json
+          git diff --cached --quiet || (git commit -m "estado $(date -u +%FT%TZ)" && git push origin state)

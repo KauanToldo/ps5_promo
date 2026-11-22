@@ -1,0 +1,85 @@
+# Configuração do monitor de preços do PS5 Slim Digital.
+# Segredos (CEP, token do WhatsApp) NÃO ficam aqui: use variáveis de ambiente / GitHub Secrets.
+
+limite_preco: 3800.00        # preço final (produto + frete) em R$
+preco_suspeito_abaixo_de: 2500.00
+alerta_duplicado_horas: 24
+heartbeat_dias: 7
+falhas_para_avisar_dias: 3   # avisa uma vez se uma fonte falhar por N dias seguidos
+
+http:
+  timeout: 20
+  tentativas: 3
+  espera_base: 2             # backoff exponencial: 2s, 4s, 8s
+  user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36 ps5-promo-monitor (uso pessoal)"
+  pausa_entre_fontes: 2
+
+# Palavras-chave (comparação em minúsculas, sem acentos)
+filtros:
+  incluir_todas:
+    - ps5|playstation 5|playstation5
+    - slim
+    - digital
+  excluir_qualquer:
+    - pro
+    - usado
+    - seminovo
+    - recondicionado
+    - leitor
+    - drive
+    - unidade de disco
+    - capa
+    - base
+    - suporte
+    - kit
+    - cooler
+    - tampa
+    - skin
+    - carregador
+    - headset
+    - jogo
+    - midia fisica
+    - somente caixa
+    - caixa vazia
+    - pre-venda
+    - pre venda
+    - reserva
+    - com disco
+    - com leitor
+    - bluray
+    - blu-ray
+    - fat
+    - ps4
+    - xbox
+  # O título precisa COMEÇAR com um destes (evita acessórios que citam o PS5):
+  titulo_inicia_com:
+    - console
+    - playstation
+    - ps5
+    - sony
+  # exceções: "pro" aparece em "protecao"; tratamos por palavra inteira em filters.py
+
+# Marketplaces: exigir loja oficial ou vendedor confiável
+vendedores_confiaveis:
+  - kabum
+  - magalu
+  - magazine luiza
+  - amazon
+  - americanas
+  - casas bahia
+  - ponto
+  - fast shop
+  - carrefour
+  - submarino
+  - girafa
+  - havan
+  - sony
+exigir_vendedor_confiavel: true
+
+fontes:
+  zoom: true
+  buscape: true
+  kabum: true
+  # Inviáveis em IP de datacenter / exigem navegador (ver README, seção "Relatório"):
+  mercadolivre: false
+  havan: false
