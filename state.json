@@ -24,11 +24,21 @@
    "total": 4184.07,
    "store": "KaBuM!",
    "url": "https://www.zoom.com.br/console-de-video-game/console-playstation-5-slim-825gb-sony-ps5-edicao-digital-bundle-4k"
+  },
+  {
+   "ts": "2026-11-23T01:55:39+0000",
+   "total": 4370.07,
+   "store": "KaBuM!",
+   "url": "https://www.kabum.com.br/produto/1050570/console-sony-playstation-5-edicao-digital-slim-ssd-825gb-controle-dualsense-astro-s-playroom-branco-cfi-2114b"
   }
  ],
  "failures": {
   "terabyte": {
    "since": "2026-11-22T15:35:16+0000",
+   "warned": false
+  },
+  "amazon": {
+   "since": "2026-11-23T01:55:18+0000",
    "warned": false
   }
  },
