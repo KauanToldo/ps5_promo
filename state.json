@@ -71,16 +71,18 @@
    "total": 4369.05,
    "store": "KaBuM!",
    "url": "https://www.zoom.com.br/console-de-video-game/console-playstation-5-slim-825gb-sony-ps5-edicao-digital-bundle-4k"
+  },
+  {
+   "ts": "2026-11-25T21:56:48+0000",
+   "total": 4289.9,
+   "store": "Amazon",
+   "url": "https://www.zoom.com.br/console-de-video-game/console-playstation-5-slim-825gb-sony-ps5-edicao-digital-bundle-4k"
   }
  ],
  "failures": {
   "terabyte": {
    "since": "2026-11-22T15:35:16+0000",
-   "warned": false
-  },
-  "amazon": {
-   "since": "2026-11-25T02:44:09+0000",
-   "warned": false
+   "warned": true
   }
  },
  "last_heartbeat": "2026-11-22T15:17:18+0000"
