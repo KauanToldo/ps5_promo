@@ -113,16 +113,18 @@
    "total": 4151.74,
    "store": "Magazine Luiza",
    "url": "https://www.zoom.com.br/console-de-video-game/console-playstation-5-slim-825gb-sony-ps5-edicao-digital-bundle-4k"
+  },
+  {
+   "ts": "2026-11-28T06:50:44+0000",
+   "total": 4161.42,
+   "store": "Magazine Luiza",
+   "url": "https://www.zoom.com.br/console-de-video-game/console-playstation-5-slim-825gb-sony-ps5-edicao-digital-bundle-4k"
   }
  ],
  "failures": {
   "terabyte": {
    "since": "2026-11-22T15:35:16+0000",
    "warned": true
-  },
-  "amazon": {
-   "since": "2026-11-26T23:12:59+0000",
-   "warned": false
   }
  },
  "last_heartbeat": "2026-11-22T15:17:18+0000"
